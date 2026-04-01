@@ -5,7 +5,6 @@ from nltk.corpus import wordnet
 
 nltk.download('wordnet')
 
-translator = Translator()
 
 def get_word_type(word):
     synsets = wordnet.synsets(word)
