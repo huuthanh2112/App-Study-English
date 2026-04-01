@@ -1,5 +1,5 @@
 import streamlit as st
-from googletrans import Translator
+from deep_translator import GoogleTranslator
 import nltk
 from nltk.corpus import wordnet
 
@@ -23,7 +23,7 @@ def get_word_type(word):
 
 def translate(text, dest='vi'):
     try:
-        return translator.translate(text, dest=dest).text
+        return GoogleTranslator(source='auto', target=dest).translate(text)
     except:
         return "Lỗi dịch 😢"
 
